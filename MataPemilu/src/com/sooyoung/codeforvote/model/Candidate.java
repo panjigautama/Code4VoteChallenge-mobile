@@ -20,7 +20,6 @@ public class Candidate extends SugarRecord<Candidate> {
 	String hometownRegion;
 	String party;
 	String biography;
-	String photoUrl;
 
 	public Candidate(Context context) {
 		super(context);
@@ -137,13 +136,5 @@ public class Candidate extends SugarRecord<Candidate> {
 
 	public void setBiography(String biography) {
 		this.biography = biography;
-	}
-
-	public String getPhotoUrl() {
-		return photoUrl;
-	}
-
-	public void setPhotoUrl(String photoUrl) {
-		this.photoUrl = photoUrl;
 	}
 }

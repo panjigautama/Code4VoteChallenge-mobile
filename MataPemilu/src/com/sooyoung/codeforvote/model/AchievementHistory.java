@@ -10,6 +10,7 @@ public class AchievementHistory extends SugarRecord<AchievementHistory> {
 	String candidateId;
 	String entityName;
 	String yearAchieved;
+	String institution;
 
 	public AchievementHistory(Context context) {
 		super(context);
@@ -46,6 +47,14 @@ public class AchievementHistory extends SugarRecord<AchievementHistory> {
 
 	public void setYearAchieved(String yearAchieved) {
 		this.yearAchieved = yearAchieved;
+	}
+
+	public String getInstitution() {
+		return institution;
+	}
+
+	public void setInstitution(String institution) {
+		this.institution = institution;
 	}
 
 }
