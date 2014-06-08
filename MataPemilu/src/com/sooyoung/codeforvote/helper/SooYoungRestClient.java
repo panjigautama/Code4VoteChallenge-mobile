@@ -16,9 +16,19 @@ public class SooYoungRestClient {
 		mHttpClient.get(getAbsoluteUrl(url), params, callback);
 	}
 
+	public static void getCustom(String url, RequestParams params,
+			AsyncHttpResponseHandler callback) {
+		mHttpClient.get(url, params, callback);
+	}
+
 	public static void post(String url, RequestParams params,
 			AsyncHttpResponseHandler callback) {
 		mHttpClient.post(getAbsoluteUrl(url), params, callback);
+	}
+
+	public static void postCustom(String url, RequestParams params,
+			AsyncHttpResponseHandler callback) {
+		mHttpClient.post(url, params, callback);
 	}
 
 	private static String getAbsoluteUrl(String url) {

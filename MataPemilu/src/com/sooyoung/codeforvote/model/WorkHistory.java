@@ -9,7 +9,6 @@ public class WorkHistory extends SugarRecord<WorkHistory> {
 	Long id;
 	String candidateId;
 	String entityName;
-	String position;
 	String startYear;
 	String endYear;
 
@@ -56,14 +55,6 @@ public class WorkHistory extends SugarRecord<WorkHistory> {
 
 	public void setEndYear(String endYear) {
 		this.endYear = endYear;
-	}
-
-	public String getPosition() {
-		return position;
-	}
-
-	public void setPosition(String position) {
-		this.position = position;
 	}
 
 }

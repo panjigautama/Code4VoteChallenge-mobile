@@ -30,7 +30,7 @@ public class Candidate extends SugarRecord<Candidate> {
 		return candidateId;
 	}
 
-	public void setId(String candidateId) {
+	public void setCandidateId(String candidateId) {
 		this.candidateId = candidateId;
 	}
 
@@ -137,5 +137,4 @@ public class Candidate extends SugarRecord<Candidate> {
 	public void setBiography(String biography) {
 		this.biography = biography;
 	}
-
 }
