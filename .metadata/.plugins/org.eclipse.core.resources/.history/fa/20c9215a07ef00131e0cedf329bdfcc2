@@ -1,0 +1,21 @@
+package com.sooyoung.codeforvote.helper;
+
+import android.app.DownloadManager.Request;
+
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
+public class SooYoungRestClient {
+
+	private static AsyncHttpClient mHttpClient = new AsyncHttpClient();
+
+	// TODO Define Base Url
+	private static final String BASE_URL = "";
+
+	public static void get(String url, RequestParams params,
+			AsyncHttpResponseHandler callback) {
+		mHttpClient.get(getAbsoluteUrl(url), params, callback);
+	}
+
+}

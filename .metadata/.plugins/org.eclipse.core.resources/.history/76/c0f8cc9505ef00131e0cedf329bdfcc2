@@ -1,0 +1,5 @@
+package com.sooyoung.codeforvote.model;
+
+public class Candidate {
+
+}

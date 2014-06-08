@@ -1,0 +1,12 @@
+package com.sooyoung.codeforvote.helper;
+
+import com.loopj.android.http.AsyncHttpClient;
+
+public class SooYoungRestClient {
+	
+	private static AsyncHttpClient mHttpClient = new AsyncHttpClient();
+	
+	//TODO Define Base Url
+	private static final String BASE_URL = "";
+
+}

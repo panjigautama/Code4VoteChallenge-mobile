@@ -1,0 +1,7 @@
+package com.sooyoung.codeforvote;
+
+import com.orm.SugarApp;
+
+public class SooYoungApplication extends SugarApp {
+
+}
