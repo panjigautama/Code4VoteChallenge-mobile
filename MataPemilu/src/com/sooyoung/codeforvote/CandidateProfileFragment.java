@@ -3,10 +3,13 @@ package com.sooyoung.codeforvote;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.FragmentArg;
 import org.androidannotations.annotations.ViewById;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,36 +33,81 @@ import com.squareup.picasso.Picasso;
 @EFragment(R.layout.fragment_candidate_profile)
 public class CandidateProfileFragment extends Fragment {
 
-	@ViewById(R.id.profile_photo)
-	ImageView mProfileImageView;
+	private static final String PRES_ID = "pres_id";
+	private static final String PRES_TWITTER_ID = "pres_twitter_id";
+	private static final String WAPRES_ID = "wapres_id";
+	private static final String WAPRES_TWITTER_ID = "wapres_twitter_id";
 
-	Candidate mCandidate;
+	@ViewById(R.id.candidate_pres)
+	ImageView mPresImageView;
 
-	public static CandidateProfileFragment createFragment(String id,
-			String twitterId) {
+	@ViewById(R.id.candidate_wapres)
+	ImageView mWapresImageView;
+
+	@FragmentArg(PRES_ID)
+	String presId;
+
+	@FragmentArg(PRES_TWITTER_ID)
+	String presTwitterId;
+
+	@FragmentArg(WAPRES_ID)
+	String wapresId;
+
+	@FragmentArg(WAPRES_TWITTER_ID)
+	String wapresTwitterId;
+
+	Candidate mPresCandidate;
+	Candidate mWapresCandidate;
+
+	public static CandidateProfileFragment createFragment(
+			List<HashMap<String, String>> id) {
 		CandidateProfileFragment fragment = new CandidateProfileFragment_();
 		Bundle args = new Bundle();
-		args.putString("id", id);
-		args.putString("twitter_id", twitterId);
+		args.putString(PRES_ID, id.get(0).get(PRES_ID));
+		args.putString(PRES_TWITTER_ID, id.get(0).get(PRES_TWITTER_ID));
+		args.putString(WAPRES_ID, id.get(1).get(WAPRES_ID));
+		args.putString(WAPRES_TWITTER_ID, id.get(1).get(WAPRES_TWITTER_ID));
 		fragment.setArguments(args);
 		return fragment;
 	}
 
-	@AfterViews
-	void initialize() {
-		String id = getArguments().getString("id");
-		String twitterId = getArguments().getString("twitter_id");
-		List<Candidate> candidateList = Candidate.find(Candidate.class,
-				"candidate_id = ?", id);
-		if (candidateList.size() == 0) {
-			getCandidateProfile(id);
-		} else {
-			mCandidate = candidateList.get(0);
-		}
-		getCandidateProfileImage(twitterId);
+	@Click(R.id.candidate_pres)
+	void showPresidentProfile() {
+		CandidateProfileDialog dialog = new CandidateProfileDialog();
+		dialog.show(getFragmentManager(), null);
 	}
 
-	private void getCandidateProfileImage(String twitterId) {
+	@AfterViews
+	void initialize() {
+		List<Candidate> presCandidateList = Candidate.find(Candidate.class,
+				"candidate_id = ?", presId);
+		List<Candidate> wapresCandidateList = Candidate.find(Candidate.class,
+				"candidate_id = ?", wapresId);
+
+		if (presCandidateList.size() == 0) {
+			getCandidateProfile(presId);
+		} else {
+			mPresCandidate = presCandidateList.get(0);
+		}
+
+		getCandidateProfileImage(presTwitterId, mPresImageView);
+		if (wapresCandidateList.size() == 0) {
+			getCandidateProfile(wapresId);
+		} else {
+			mWapresCandidate = wapresCandidateList.get(0);
+		}
+
+		getCandidateProfileImage(wapresTwitterId, mWapresImageView);
+	}
+
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		Log.d("FRAGMENT", "destroyed");
+	}
+
+	private void getCandidateProfileImage(String twitterId,
+			final ImageView imageView) {
 		SooYoungRestClient.getCustom(
 				"http://54.255.165.249/?r=user/view&user_id=" + twitterId,
 				null, new JsonHttpResponseHandler() {
@@ -69,7 +117,7 @@ public class CandidateProfileFragment extends Fragment {
 							Picasso.with(getActivity())
 									.load(response.getJSONObject("items")
 											.getString("avatar_url"))
-									.into(mProfileImageView);
+									.into(imageView);
 						} catch (JSONException e) {
 							e.printStackTrace();
 						}

@@ -6,9 +6,17 @@
     android:padding="10dip" >
 
     <ImageView
-        android:id="@+id/profile_photo"
-        android:layout_width="100dip"
-        android:layout_height="100dip"
-        android:layout_gravity="center" />
+        android:id="@+id/candidate_pres"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/candidate_wapres"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
 
 </LinearLayout>

@@ -14,11 +14,12 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import com.sooyoung.codeforvote.R.layout;
 import org.androidannotations.api.view.HasViews;
+import org.androidannotations.api.view.OnViewChangedListener;
 import org.androidannotations.api.view.OnViewChangedNotifier;
 
 public final class SplashActivity_
     extends SplashActivity
-    implements HasViews
+    implements HasViews, OnViewChangedListener
 {
 
     private final OnViewChangedNotifier onViewChangedNotifier_ = new OnViewChangedNotifier();
@@ -33,6 +34,7 @@ public final class SplashActivity_
     }
 
     private void init_(Bundle savedInstanceState) {
+        OnViewChangedNotifier.registerOnViewChangedListener(this);
     }
 
     @Override
@@ -59,6 +61,11 @@ public final class SplashActivity_
 
     public static SplashActivity_.IntentBuilder_ intent(Fragment supportFragment) {
         return new SplashActivity_.IntentBuilder_(supportFragment);
+    }
+
+    @Override
+    public void onViewChanged(HasViews hasViews) {
+        initialize();
     }
 
     public static class IntentBuilder_ {
