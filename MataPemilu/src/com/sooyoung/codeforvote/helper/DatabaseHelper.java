@@ -35,7 +35,7 @@ public class DatabaseHelper {
 	 */
 	public static Candidate getCandidateById(String id) {
 		return (Candidate) Select.from(Candidate.class)
-				.where(Condition.prop("candidateId").eq(id)).list().get(0);
+				.where(Condition.prop("candidate_id").eq(id)).list().get(0);
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class DatabaseHelper {
 	 */
 	public static List<EducationHistory> getEducationHistoryOfCandidate(
 			String id) {
-		return EducationHistory.find(EducationHistory.class, "candidateId = ?",
+		return EducationHistory.find(EducationHistory.class, "candidate_id = ?",
 				id);
 	}
 
@@ -59,7 +59,7 @@ public class DatabaseHelper {
 	 * @return List of work history of the specified candidate
 	 */
 	public static List<WorkHistory> getWorkHistoryOfCandidate(String id) {
-		return WorkHistory.find(WorkHistory.class, "candidateId = ?", id);
+		return WorkHistory.find(WorkHistory.class, "candidate_id = ?", id);
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class DatabaseHelper {
 	public static List<AchievementHistory> getAchievementHistoryOfCandidate(
 			String id) {
 		return AchievementHistory.find(AchievementHistory.class,
-				"candidateId = ?", id);
+				"candidate_id = ?", id);
 	}
 
 }
