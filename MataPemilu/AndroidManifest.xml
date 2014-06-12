@@ -30,7 +30,9 @@
         </activity>
         <activity android:name="com.sooyoung.codeforvote.CandidateCompareActivity_" >
         </activity>
-
+        <activity android:name="com.sooyoung.codeforvote.VoteActivity_" >
+        </activity>
+        
         <meta-data
             android:name="DATABASE"
             android:value="sooyoung.db" />

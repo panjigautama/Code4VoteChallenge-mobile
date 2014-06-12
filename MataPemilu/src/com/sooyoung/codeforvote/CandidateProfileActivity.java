@@ -90,7 +90,8 @@ public class CandidateProfileActivity extends SherlockFragmentActivity
 
 	@OptionsItem
 	void voteSelected() {
-		Toast.makeText(this, "vote", Toast.LENGTH_SHORT).show();
+		Intent intent = new Intent( this, VoteActivity_.class );
+		startActivity(intent);
 	}
 
 	private void createSecondCandidateFragment() {
