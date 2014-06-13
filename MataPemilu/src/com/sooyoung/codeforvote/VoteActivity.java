@@ -4,11 +4,9 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.OptionsItem;
 import org.androidannotations.annotations.OptionsMenu;
-import org.androidannotations.annotations.ViewById;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;

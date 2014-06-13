@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/first_candidate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/first_candidate_pres"
+            android:layout_width="150dip"
+            android:layout_height="150dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/pb_2" />
+
+        <ImageView
+            android:id="@+id/first_candidate_wapres"
+            android:layout_width="150dip"
+            android:layout_height="150dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ht" />
+
+        <com.sooyoung.codeforvote.DeliciousTextView
+            android:id="@+id/first_candidate_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dip"
+            android:text="HATTA RAJASA"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/second_candidate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="#E9EAEB" >
+
+        <ImageView
+            android:id="@+id/second_candidate_pres"
+            android:layout_width="150dip"
+            android:layout_height="150dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/jw_2" />
+
+        <ImageView
+            android:id="@+id/second_candidate_wapres"
+            android:layout_width="150dip"
+            android:layout_height="150dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/jk" />
+
+        <com.sooyoung.codeforvote.DeliciousTextView
+            android:id="@+id/second_candidate_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dip"
+            android:text="JUSUF KALLA"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>

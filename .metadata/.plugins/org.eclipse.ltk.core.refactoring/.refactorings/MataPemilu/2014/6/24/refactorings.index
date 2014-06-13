@@ -1,1 +1,50 @@
 1402230793832	Copy file
+1402241190246	Rename local variable 'arg0'
+1402243116072	Rename field 'schoolName'
+1402244865092	Infer generic type arguments
+1402333184840	Rename local variable 'candidateList'
+1402333290168	Rename field 'mCandidate'
+1402341948035	Copy file
+1402391684623	Copy file
+1402392202809	Rename field 'idList'
+1402392364324	Rename local variable 'idList'
+1402392370033	Rename field 'firstCandidateidList'
+1402480084394	Wrap in Container
+1402480098460	Wrap in Container
+1402480207608	Rename field 'mFirstCandidateFragment'
+1402480215755	Rename field 'mSecondCandidateFragment'
+1402480223584	Rename field 'mFirstCandidateList'
+1402480245271	Rename field 'mSecondCandidateList'
+1402480268200	Rename method 'createFirstCandidateFragment'
+1402480275034	Rename method 'createSecondCandidateFragment'
+1402480300271	Rename local variable 'presId'
+1402480311152	Rename local variable 'presTwitterId'
+1402480321282	Rename local variable 'secondPresTwitterId'
+1402480341105	Rename local variable 'secondWapresTwitterId'
+1402480348141	Rename local variable 'firsWapresTwitterId'
+1402480358676	Rename local variable 'wapresId'
+1402480366440	Rename local variable 'wapresTwitterId'
+1402480373841	Rename local variable 'firstPresId'
+1402480384986	Rename local variable 'presMap'
+1402480408392	Rename local variable 'wapresMap'
+1402480431554	Rename local variable 'presId'
+1402480441060	Rename local variable 'presTwitterId'
+1402480452796	Rename local variable 'wapresId'
+1402480462935	Rename local variable 'wapresTwitterId'
+1402480472447	Rename local variable 'presMap'
+1402480481005	Rename local variable 'wapresMap'
+1402502254023	Rename resource '1_ava.png'
+1402502263494	Rename resource '1.png'
+1402502270792	Rename resource '2_ava.png'
+1402502278695	Rename resource '2.png'
+1402502289331	Rename resource 'tw_ava.png'
+1402503259087	Copy file
+1402503274710	Rename resource 'fragment_candidate_profile.xml'
+1402503334289	Rename type 'CandidateProfileFragment'
+1402503400092	Copy compilation unit
+1402503559979	Rename field 'mPresCandidate'
+1402503568629	Rename field 'mWapresCandidate'
+1402507103263	Rename method 'processHtml'
+1402510427242	Copy file
+1402511169206	Rename local variable 'stringBuilder'
+1402511635799	Delete element

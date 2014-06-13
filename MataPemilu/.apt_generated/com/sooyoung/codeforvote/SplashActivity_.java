@@ -9,10 +9,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import com.sooyoung.codeforvote.R.layout;
+import org.androidannotations.api.BackgroundExecutor;
 import org.androidannotations.api.view.HasViews;
 import org.androidannotations.api.view.OnViewChangedListener;
 import org.androidannotations.api.view.OnViewChangedNotifier;
@@ -23,6 +26,7 @@ public final class SplashActivity_
 {
 
     private final OnViewChangedNotifier onViewChangedNotifier_ = new OnViewChangedNotifier();
+    private Handler handler_ = new Handler(Looper.getMainLooper());
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,6 +70,38 @@ public final class SplashActivity_
     @Override
     public void onViewChanged(HasViews hasViews) {
         initialize();
+    }
+
+    @Override
+    public void showActivity() {
+        handler_.post(new Runnable() {
+
+
+            @Override
+            public void run() {
+                SplashActivity_.super.showActivity();
+            }
+
+        }
+        );
+    }
+
+    @Override
+    public void loading() {
+        BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
+
+
+            @Override
+            public void execute() {
+                try {
+                    SplashActivity_.super.loading();
+                } catch (Throwable e) {
+                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
+                }
+            }
+
+        }
+        );
     }
 
     public static class IntentBuilder_ {

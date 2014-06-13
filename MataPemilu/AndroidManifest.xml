@@ -19,7 +19,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.sooyoung.codeforvote.SplashActivity_"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Sherlock.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,20 +32,19 @@
         <activity android:name="com.sooyoung.codeforvote.CandidateCompareActivity_" >
         </activity>
         <activity android:name="com.sooyoung.codeforvote.VoteActivity_" >
+            <meta-data
+                android:name="DATABASE"
+                android:value="sooyoung.db" />
+            <meta-data
+                android:name="VERSION"
+                android:value="1" />
+            <meta-data
+                android:name="QUERY_LOG"
+                android:value="true" />
+            <meta-data
+                android:name="DOMAIN_PACKAGE_NAME"
+                android:value="com.sooyoung.codeforvote.model" />
         </activity>
-        
-        <meta-data
-            android:name="DATABASE"
-            android:value="sooyoung.db" />
-        <meta-data
-            android:name="VERSION"
-            android:value="1" />
-        <meta-data
-            android:name="QUERY_LOG"
-            android:value="true" />
-        <meta-data
-            android:name="DOMAIN_PACKAGE_NAME"
-            android:value="com.sooyoung.codeforvote.model" />
     </application>
 
 </manifest>
