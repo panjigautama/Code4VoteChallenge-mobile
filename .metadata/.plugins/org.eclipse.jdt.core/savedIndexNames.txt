@@ -1,23 +1,7 @@
-INDEX VERSION 1.126+/Users/aldi/Documents/workspace-codeforvote/.metadata/.plugins/org.eclipse.jdt.core
-1628266423.index
-2722363104.index
-2282128760.index
+INDEX VERSION 1.126+/Users/panjigautama/Documents/Project/Code4Vote President/source/Code4VoteChallenge-mobile/.metadata/.plugins/org.eclipse.jdt.core
+1632994706.index
 228919326.index
-1280841783.index
-1579964474.index
-4283430729.index
-521750321.index
-1415693123.index
-2443107353.index
-1742623495.index
-1801268413.index
-2152303938.index
-66277136.index
-765453901.index
-474904895.index
-1945712721.index
-1854690253.index
-2934529120.index
-2212974170.index
 903054423.index
-3238042035.index
+1280841783.index
+1415693123.index
+1628266423.index

@@ -44,7 +44,7 @@
 
     <style name="text_title_candidate">
         <item name="android:textStyle">bold</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textSize">35dp</item>
     </style>
 
     <style name="text_title">
@@ -60,12 +60,12 @@
 
     <style name="text_vote_result">
         <item name="android:textStyle">bold</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textSize">40dp</item>
     </style>
 
     <style name="text_sentiment_result">
         <item name="android:textStyle">bold</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textSize">30dp</item>
     </style>
 
 </resources>

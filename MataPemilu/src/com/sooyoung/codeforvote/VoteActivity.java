@@ -20,15 +20,13 @@ public class VoteActivity extends SherlockFragmentActivity
 
 	ActionBar mActionBar;
 	FragmentManager mFragmentManager;
-	Fragment mVoteFragment;
 
 	@AfterViews
 	void initialize() {
 		
 		// wire up fragment
 		mFragmentManager 	= getSupportFragmentManager();
-		mVoteFragment 		= VoteFragment.newInstance();
-		mFragmentManager.beginTransaction().replace(R.id.frame_vote, mVoteFragment).commit();
+		mFragmentManager.beginTransaction().replace(R.id.frame_vote, new VoteFragment_()).commit();
 		
 		// enable back button
 		mActionBar 			= getSupportActionBar();

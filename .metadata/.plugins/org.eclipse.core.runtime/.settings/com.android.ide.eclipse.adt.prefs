@@ -1,5 +1,6 @@
 com.android.ide.eclipse.adt.fixLegacyEditors=1
-com.android.ide.eclipse.adt.sdk=/Applications/adt/sdk
+com.android.ide.eclipse.adt.lintSeverities=ExtraTranslation\=WARNING,MissingTranslation\=WARNING
+com.android.ide.eclipse.adt.sdk=/Users/panjigautama/Development/androidSDK
 com.android.ide.eclipse.adt.xmlEditor=true
 design.structure.flyout.width=174
 eclipse.preferences.version=1

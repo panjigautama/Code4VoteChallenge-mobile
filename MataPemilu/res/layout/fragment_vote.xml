@@ -57,14 +57,14 @@
                 android:gravity="center_vertical|center_horizontal|center"
                 android:orientation="vertical" >
 
-                <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
                     style="@style/text_title_candidate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Prabowo"
                     android:textStyle="bold" />
 
-                <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
                     style="@style/text_title_candidate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -83,14 +83,14 @@
                 android:gravity="center_vertical|center_horizontal|center"
                 android:orientation="vertical" >
 
-                <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
                     style="@style/text_title_candidate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Jokowi"
                     android:textStyle="bold" />
 
-                <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
                     style="@style/text_title_candidate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -155,7 +155,7 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
         style="@style/text_title"
         android:layout_marginTop="10dp"
         android:id="@+id/text_result"
@@ -180,7 +180,7 @@
         android:layout_below="@+id/text_result"
         android:layout_centerHorizontal="true" >
 
-        <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
             style="@style/text_vote_result"
             android:id="@+id/vote_result_one"
             android:layout_width="0dp"
@@ -190,7 +190,7 @@
             android:gravity="center_vertical|center_horizontal|center"
             android:text="0%" />
 
-        <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
             style="@style/text_vote_result"
             android:id="@+id/vote_result_two"
             android:layout_width="0dp"
@@ -201,7 +201,7 @@
             android:text="0%" />
     </LinearLayout>
 
-    <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
         android:id="@+id/vote_result_counts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -209,7 +209,7 @@
         android:layout_centerHorizontal="true"
         android:text="(dari $ voters)" />
 
-    <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
         style="@style/text_title"
         android:layout_marginTop="10dp"
         android:id="@+id/sentiment_result"
@@ -228,7 +228,7 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/emot_positive" />
 
-    <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
         style="@style/text_sentiment_result"
         android:layout_marginRight="10dp"
         android:id="@+id/sentiment_positive_one"
@@ -239,7 +239,7 @@
         android:layout_toLeftOf="@+id/sentiment_positive"
         android:text="0%" />
 
-    <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
         style="@style/text_sentiment_result"
         android:layout_marginLeft="10dp"
         android:id="@+id/sentiment_positive_two"
@@ -259,7 +259,7 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/emot_neutral" />
 
-    <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
         style="@style/text_sentiment_result"
         android:layout_marginRight="10dp"
         android:id="@+id/sentiment_neutral_one"
@@ -270,7 +270,7 @@
         android:layout_toLeftOf="@+id/sentiment_neutral"
         android:text="0%" />
 
-    <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
         style="@style/text_sentiment_result"
         android:layout_marginLeft="10dp"
         android:id="@+id/sentiment_neutral_two"
@@ -290,7 +290,7 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/emot_negative" />
 
-    <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
         style="@style/text_sentiment_result"
         android:layout_marginRight="10dp"
         android:id="@+id/sentiment_negative_one"
@@ -301,7 +301,7 @@
         android:layout_toLeftOf="@+id/sentiment_negative"
         android:text="0%" />
 
-    <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
         style="@style/text_sentiment_result"
         android:layout_marginLeft="10dp"
         android:id="@+id/sentiment_negative_two"
@@ -314,7 +314,7 @@
     
 
 
-    <TextView
+    <com.sooyoung.codeforvote.DeliciousTextView
         android:layout_marginTop="10dp"
         android:id="@+id/text_share_socmed"
         android:layout_width="wrap_content"
