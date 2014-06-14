@@ -19,6 +19,7 @@ import com.sooyoung.codeforvote.helper.DatabaseHelper;
 import com.sooyoung.codeforvote.model.AchievementHistory;
 import com.sooyoung.codeforvote.model.Candidate;
 import com.sooyoung.codeforvote.model.EducationHistory;
+import com.sooyoung.codeforvote.model.OrganizationHistory;
 import com.sooyoung.codeforvote.model.WorkHistory;
 
 @EFragment(R.layout.fragment_candidate_compare)
@@ -68,11 +69,13 @@ public class CandidateCompareFragment extends Fragment {
 		String educationHistory = processEducation();
 		String workHistory = processWork();
 		String achievementHistory = processAchievement();
+		String organizationHistory = processOrganization();
 
 		mLabelList.add(biodata);
 		mLabelList.add(educationHistory);
 		mLabelList.add(workHistory);
 		mLabelList.add(achievementHistory);
+		mLabelList.add(organizationHistory);
 
 		int layoutResourceId;
 		if (position == 0) {
@@ -143,6 +146,22 @@ public class CandidateCompareFragment extends Fragment {
 		builder.append("\n");
 		for (int i = 0; i < 3; i++) {
 			builder.append(list.get(i));
+			builder.append("\n");
+			builder.append("\n");
+		}
+		return builder.toString();
+	}
+
+	private String processOrganization() {
+		List<OrganizationHistory> organizationList = OrganizationHistory.find(
+				OrganizationHistory.class, "candidate_id = ?", id);
+		StringBuilder builder = new StringBuilder();
+		builder.append("\n");
+		builder.append("\n");
+		for (int i = 0; i < organizationList.size(); i++) {
+			builder.append(organizationList.get(i).getPosition());
+			builder.append("\n");
+			builder.append(organizationList.get(i).getEntityName());
 			builder.append("\n");
 			builder.append("\n");
 		}

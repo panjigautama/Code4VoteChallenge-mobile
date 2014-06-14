@@ -17,8 +17,8 @@
         android:id="@+id/compare_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF"
-        android:divider="#000000"
+        android:background="#F8F9F9"
+        android:divider="#E9EAEB"
         android:dividerHeight="2dip" >
     </ListView>
 

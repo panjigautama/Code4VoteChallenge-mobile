@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sooyoung.codeforvote.R;
@@ -48,6 +49,19 @@ public class CandidateCompareListAdapter extends BaseAdapter {
 		}
 		Log.d("text", text.get(position));
 		TextView label = (TextView) view.findViewById(R.id.label_text);
+		ImageView image = (ImageView) view.findViewById(R.id.imageView1);
+		if (position == 0) {
+			image.setImageResource(R.drawable.icon_bio);
+		} else if (position == 1) {
+			image.setImageResource(R.drawable.icon_edu);
+		} else if (position == 2) {
+			image.setImageResource(R.drawable.icon_wrk);
+		} else if (position == 3) {
+			image.setImageResource(R.drawable.icon_awd);
+		} else if (position == 4) {
+			image.setImageResource(R.drawable.icon_org);
+		}
+
 		label.setText(text.get(position));
 		return view;
 	}

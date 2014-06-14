@@ -34,9 +34,11 @@ public class CandidateCompareActivity extends SherlockFragmentActivity implement
 		mFragmentManager = getSupportFragmentManager();
 		mCandidateIdList = new ArrayList<String>();
 		if (mPresidentCompare) {
+			setTitle("Presiden");
 			mCandidateIdList.add("ps");
 			mCandidateIdList.add("jw");
 		} else {
+			setTitle("Wakil Presiden");
 			mCandidateIdList.add("hr");
 			mCandidateIdList.add("jk");
 		}

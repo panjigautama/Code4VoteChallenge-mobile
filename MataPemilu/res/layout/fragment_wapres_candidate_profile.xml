@@ -12,20 +12,14 @@
         android:layout_weight="1" >
 
         <ImageView
-            android:id="@+id/first_candidate_pres"
-            android:layout_width="150dip"
-            android:layout_height="150dip"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/pb_2" />
-
-        <ImageView
             android:id="@+id/first_candidate_wapres"
             android:layout_width="150dip"
             android:layout_height="150dip"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
-            android:src="@drawable/ht" />
+            android:layout_alignParentTop="true"
+            android:src="@drawable/c" />
 
         <com.sooyoung.codeforvote.DeliciousTextView
             android:id="@+id/first_candidate_name"
@@ -48,20 +42,14 @@
         android:background="#E9EAEB" >
 
         <ImageView
-            android:id="@+id/second_candidate_pres"
-            android:layout_width="150dip"
-            android:layout_height="150dip"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/jw_2" />
-
-        <ImageView
             android:id="@+id/second_candidate_wapres"
             android:layout_width="150dip"
             android:layout_height="150dip"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
-            android:src="@drawable/jk" />
+            android:layout_alignParentTop="true"
+            android:src="@drawable/d" />
 
         <com.sooyoung.codeforvote.DeliciousTextView
             android:id="@+id/second_candidate_name"

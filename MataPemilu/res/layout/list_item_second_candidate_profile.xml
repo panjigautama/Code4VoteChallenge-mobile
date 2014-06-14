@@ -11,12 +11,13 @@
         android:layout_height="50dip"
         android:src="@drawable/star_yellow" />
 
-    <TextView
+    <com.sooyoung.codeforvote.CalibriTextView
         android:id="@+id/label_text"
         android:layout_width="0dip"
         android:layout_height="wrap_content"
         android:layout_weight="5"
-        android:gravity="center"
+        android:paddingLeft="10dip"
+        android:gravity="left"
         android:text="TextView1\nTextView2\nTextView3"
         android:textAlignment="center"
         android:textSize="12sp"
